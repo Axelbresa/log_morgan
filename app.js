@@ -17,18 +17,32 @@ const logFile = path.join(consolaDirectory, 'text.log');
  const logStream = fs.createWriteStream(logFile, { flags: 'a' });
 
 // Reemplazar la salida estándar (stdout) con el flujo de registro
-console.log = function (message) {
+// Función personalizada para redirigir mensajes de registro
+function logToCustomFile(message) {
   const now = new Date();
   const formattedDate = `${now.toLocaleDateString()} ${now.toLocaleTimeString()}`;
   const logMessage = `[${formattedDate}] ${message}\n`;
   logStream.write(logMessage);
   process.stdout.write(logMessage); // También muestra el mensaje en la consola
+}
+
+// Redirige console.log a la función personalizada
+console.log = function (message) {
+  logToCustomFile(`console.log: ${message}`);
+};
+
+// Redirige info a la función personalizada
+console.info = function (message) {
+  logToCustomFile(`INFO: ${message}`);
+};
+
+// Redirige alert a la función personalizada
+alert = function (message) {
+  logToCustomFile(`alert: ${message}`);
 };
 
 const app = express();
 const port = 3000;
-
-console.log("APARECISTE?");
 
 // Verifica si la carpeta LOG_MORGAN existe, y si no, la crea
 const logDirectory = path.join(__dirname, 'log_morgan');
@@ -88,7 +102,14 @@ app.get('/', (req, res) => {
   res.send('Hola, Mundo!');
 });
 
+
 app.listen(port, () => {
   console.log(`El servidor está funcionando en el puerto ${port}`);
 });
-console.log("final de la consola de archivo")
+
+//mensaje
+//  console.log("estoy usando console.log mejor estructurado");
+//  console.info("estoy usando info mejor estructurado");
+//alert("estoy usando alert mejor estructurado");
+
+
