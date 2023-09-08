@@ -2,6 +2,10 @@ const express = require('express');
 const morgan = require('morgan');
 const fs = require('fs');
 const path = require('path');
+const cors = require('cors');
+require("dotenv").config();
+
+const {sequelize}=require("./database/db");
 
 const consolaDirectory = path.join(__dirname, 'consola');
 
@@ -28,7 +32,7 @@ function logToCustomFile(message) {
 
 // Redirige console.log a la función personalizada
 console.log = function (message) {
-  logToCustomFile(`console.log: ${message}`);
+  logToCustomFile(message);
 };
 
 // Redirige info a la función personalizada
@@ -43,6 +47,12 @@ alert = function (message) {
 
 const app = express();
 const port = 3000;
+
+// Middlewares
+app.use(cors());
+app.use(morgan("dev"));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Verifica si la carpeta LOG_MORGAN existe, y si no, la crea
 const logDirectory = path.join(__dirname, 'log_morgan');
@@ -102,13 +112,23 @@ app.get('/', (req, res) => {
   res.send('Hola, Mundo!');
 });
 
+ //conexion a la base de datos
+ sequelize
+   .authenticate()
+   .then(async () => {
+     await sequelize.sync({ alter: true })
+     console.log("nos hemos conectado a la base de datos");
+   })
+   .catch((error) => {
+     console.log("se ha producido un error", error);
+   });
 
 app.listen(port, () => {
   console.log(`El servidor está funcionando en el puerto ${port}`);
 });
 
 //mensaje
-//  console.log("estoy usando console.log mejor estructurado");
+  //console.log("estoy usando console.log mejor estructurado");
 //  console.info("estoy usando info mejor estructurado");
 //alert("estoy usando alert mejor estructurado");
 
