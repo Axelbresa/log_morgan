@@ -1,0 +1,23 @@
+Se conectó con éxito a la ruta principal el 8/9/2023 06:11:06
+::1 - - [08/Sep/2023:04:11:07 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.62"
+Se conectó con éxito a la ruta principal el 8/9/2023 06:13:07
+::1 - - [08/Sep/2023:04:13:07 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.62"
+
+Se conectó con éxito a la ruta principal el 8/9/2023 06:27:11
+::1 - - [08/Sep/2023:04:27:11 +0000] "GET / HTTP/1.1" 404 139 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.62"
+Se conectó con éxito a la ruta principal el 8/9/2023 06:29:53
+::1 - - [08/Sep/2023:04:29:53 +0000] "GET / HTTP/1.1" 404 139 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.62"
+Se conectó con éxito a la ruta principal el 8/9/2023 06:29:55
+::1 - - [08/Sep/2023:04:29:55 +0000] "GET / HTTP/1.1" 404 139 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.62"
+Se conectó con éxito a la ruta principal el 8/9/2023 06:30:04
+::1 - - [08/Sep/2023:04:30:04 +0000] "GET /ejemplo HTTP/1.1" 200 18 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.62"
+Se conectó con éxito a la ruta principal el 8/9/2023 06:31:45
+::1 - - [08/Sep/2023:04:31:45 +0000] "GET /ejemplo HTTP/1.1" 404 146 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.62"
+Se conectó con éxito a la ruta principal el 8/9/2023 06:31:48
+::1 - - [08/Sep/2023:04:31:48 +0000] "GET / HTTP/1.1" 200 12 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.62"
+Se conectó con éxito a la ruta principal el 8/9/2023 06:36:24
+::1 - - [08/Sep/2023:04:36:24 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.62"
+Se conectó con éxito a la ruta principal el 8/9/2023 07:25:30
+::1 - - [08/Sep/2023:05:25:31 +0000] "GET / HTTP/1.1" 200 12 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.69"
+Se conectó con éxito a la ruta principal el 8/9/2023 07:25:31
+::1 - - [08/Sep/2023:05:25:31 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.69"

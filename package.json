@@ -1,0 +1,21 @@
+{
+  "name": "log_morgan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+   "start": "node app.js",
+   "dev":"nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "morgan": "^1.10.0",
+    "node": "^20.6.0",
+    "nodemon": "^3.0.1",
+    "path": "^0.12.7"
+  }
+}
